@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNUS Arquitetura Integrada — Do briefing à chave entregue</title>
+<meta name="description" content="UNUS Arquitetura Integrada: projeto, engenharia, gestão de obra e curadoria de materiais sob uma única responsabilidade. Chave-na-mão em Recife/PE.">
+<meta property="og:title" content="UNUS Arquitetura Integrada — Do briefing à chave entregue">
+<meta property="og:description" content="Arquitetura integrada chave-na-mão em Recife/PE. Uma responsabilidade. Uma assinatura. Um interlocutor.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header is-over-hero" id="siteHeader">
+  <div class="container header__inner">
+    <a class="brand brand--image" href="#top" aria-label="UNUS Arquitetura Integrada">
+      <img class="brand__logo" src="assets/img/logo.png" alt="UNUS Arquitetura Integrada" loading="eager">
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#cases">Cases</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="btn btn--ghost btn--sm header__cta" href="https://wa.me/5581999999999" target="_blank" rel="noopener">
+      Conversar no WhatsApp
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Processo</a>
+    <a href="#cases">Cases</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn--solid" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO (imagem como BG full) -->
+  <section class="hero hero--bg">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/hero.jpg" alt="" loading="eager">
+    </div>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot eyebrow__dot--light"></span> UNUS Arquitetura &nbsp;·&nbsp; Recife / PE</p>
+        <h1 class="display display--hero">
+          Sua obra, do briefing à chave entregue — sem você gerenciar um pedreiro sequer.
+        </h1>
+        <p class="lede lede--light">
+          Arquitetura, engenharia, gestão de obra e curadoria de materiais sob uma única responsabilidade. Você decide. A gente entrega.
+        </p>
+        <ul class="hero__bullets hero__bullets--light">
+          <li><span>01</span> Projeto executivo + maquete 3D</li>
+          <li><span>02</span> Orçamento fechado e cronograma em contrato</li>
+          <li><span>03</span> Acompanhamento de Fidelidade Digital</li>
+        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--solid btn--on-image" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Falar com a UNUS no WhatsApp</a>
+          <a class="btn btn--link btn--link-light" href="#processo">Ver como funciona <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__meta hero__meta--light">
+      <span>Est. 2026</span>
+      <span class="hero__meta-divider"></span>
+      <span>Recife · PE</span>
+    </div>
+  </section>
+
+  <!-- BARRA NICHOS — marquee animado -->
+  <section class="strip strip--marquee">
+    <div class="strip-marquee">
+      <div class="strip-marquee__track">
+        <span class="strip__label">Projetos entregues em</span>
+        <span class="sep">·</span>
+        <span class="item">Residencial alto padrão</span>
+        <span class="sep">·</span>
+        <span class="item">Empreendimentos comerciais</span>
+        <span class="sep">·</span>
+        <span class="item">Equipamentos esportivos</span>
+        <span class="sep">·</span>
+        <span class="item">Reformas integradas</span>
+        <span class="sep">·</span>
+        <span class="item">Interiores sob medida</span>
+        <span class="sep">·</span>
+        <!-- duplicado pra loop infinito -->
+        <span class="strip__label">Projetos entregues em</span>
+        <span class="sep">·</span>
+        <span class="item">Residencial alto padrão</span>
+        <span class="sep">·</span>
+        <span class="item">Empreendimentos comerciais</span>
+        <span class="sep">·</span>
+        <span class="item">Equipamentos esportivos</span>
+        <span class="sep">·</span>
+        <span class="item">Reformas integradas</span>
+        <span class="sep">·</span>
+        <span class="item">Interiores sob medida</span>
+        <span class="sep">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM É -->
+  <section class="quem" id="sobre">
+    <div class="container quem__grid">
+      <div class="quem__intro">
+        <p class="section-label">01 · Sobre</p>
+        <h2 class="h-display">Uma arquitetura<br>que assume<br>a obra inteira.</h2>
+      </div>
+      <div class="quem__body">
+        <p>A UNUS nasceu de uma constatação simples: quem contrata arquitetura, depois precisa contratar engenheiro, depois precisa caçar pedreiro, depois precisa comprar material, depois precisa fiscalizar o que ninguém combinou direito.</p>
+        <p>No fim, o cliente vira o gerente da própria obra — sem ter assinado pra isso.</p>
+        <p>A UNUS faz o oposto. Você contrata uma vez. A gente assume do briefing à entrega da chave: projeto, execução, materiais, fornecedores, prefeitura. <em>Uma responsabilidade. Uma assinatura. Um interlocutor.</em></p>
+      </div>
+    </div>
+
+    <!-- Destaque chamativo -->
+    <div class="container">
+      <figure class="pull-quote">
+        <hr class="pull-quote__rule">
+        <blockquote>
+          Você não gerencia ninguém.<br>
+          Você só recebe a obra pronta.
+        </blockquote>
+        <hr class="pull-quote__rule">
+      </figure>
+    </div>
+  </section>
+
+  <!-- DORES (cards premium) -->
+  <section class="dores">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">02 · O que termina aqui</p>
+        <h2 class="h-display">Se você já construiu<br>ou reformou,<br>conhece essa lista.</h2>
+      </header>
+
+      <div class="dores__grid">
+        <article class="dor dor--premium">
+          <span class="dor__num">01</span>
+          <h3>Mão de obra que não lê projeto.</h3>
+          <p>O desenho diz uma coisa, o pedreiro faz outra — e quem paga a diferença é você.</p>
+        </article>
+        <article class="dor dor--premium">
+          <span class="dor__num">02</span>
+          <h3>Nunca saber o custo real até o fim.</h3>
+          <p>Orçamento vira estimativa, estimativa vira "imprevisto", e o número final só aparece quando já foi gasto.</p>
+        </article>
+        <article class="dor dor--premium">
+          <span class="dor__num">03</span>
+          <h3>Coordenar fornecedores que você não tem tempo de coordenar.</h3>
+          <p>Marmoraria, eletricista, vidraceiro, marceneiro, paisagista — cada um com seu ritmo e suas desculpas.</p>
+        </article>
+        <article class="dor dor--premium">
+          <span class="dor__num">04</span>
+          <h3>Reforma pequena que vira retrabalho grande.</h3>
+          <p>Aquele detalhe mal resolvido que volta seis meses depois com infiltração, trinca ou desgaste prematuro.</p>
+        </article>
+      </div>
+
+      <p class="dores__bridge">
+        Tudo isso desaparece quando a obra tem<br>
+        <strong>um único responsável técnico</strong> do início ao fim.
+      </p>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAL -->
+  <section class="diferencial" id="servicos">
+    <div class="container diferencial__grid">
+      <div class="diferencial__intro">
+        <p class="section-label section-label--light">03 · Responsabilidade única</p>
+        <h2 class="h-display">Uma assinatura.<br>Um responsável.<br>Um resultado.</h2>
+        <p class="lede lede--light">A maioria dos escritórios entrega o projeto e some. A UNUS entrega a chave.</p>
+      </div>
+
+      <div class="diferencial__table">
+        <div class="row row--head">
+          <div>Modelo tradicional</div>
+          <div>Modelo UNUS</div>
+        </div>
+        <div class="row">
+          <div>Você contrata o arquiteto. Depois o engenheiro. Depois o construtor.</div>
+          <div>Você contrata a UNUS. Só.</div>
+        </div>
+        <div class="row">
+          <div>Cada profissional culpa o outro quando algo dá errado.</div>
+          <div>A UNUS responde por todas as etapas.</div>
+        </div>
+        <div class="row">
+          <div>Você vira o gerente da obra sem querer.</div>
+          <div>Você recebe relatórios. Aprova ou ajusta.</div>
+        </div>
+        <div class="row">
+          <div>Custo real só aparece no fim.</div>
+          <div>Planejamento físico-financeiro fechado no contrato.</div>
+        </div>
+        <div class="row">
+          <div>Execução nem sempre corresponde ao projeto aprovado.</div>
+          <div>Acompanhamento de Fidelidade Digital comprova que o que foi executado é o que foi aprovado.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCLUIDO — imagens full-bleed alternadas -->
+  <section class="incluido">
+    <div class="container">
+      <header class="section-head section-head--center">
+        <p class="section-label">04 · O que está incluído</p>
+        <h2 class="h-display">Tudo que entra<br>no contrato UNUS.</h2>
+        <p class="lede">Sem letrinha pequena. Sem serviço que vira "extra" no meio da obra.</p>
+      </header>
+    </div>
+
+    <div class="incluido__grid">
+      <!-- 01 foto esquerda -->
+      <article class="entry entry--media-left">
+        <div class="entry__media">
+          <div class="entry__media-bg" style="background-image:url('assets/img/detalhe-3.jpg')"></div>
+          <img src="assets/img/detalhe-3.jpg" alt="Maquete 3D de ambiente projetado pela UNUS" loading="lazy">
+        </div>
+        <div class="entry__body">
+          <span class="entry__num">01</span>
+          <h3>Maquete 3D dos ambientes</h3>
+          <p>Você vê a obra antes da obra existir. Decide com clareza, não com promessa.</p>
+        </div>
+      </article>
+
+      <!-- 02 foto direita -->
+      <article class="entry entry--media-right">
+        <div class="entry__media">
+          <div class="entry__media-bg" style="background-image:url('assets/img/detalhe-1.jpg')"></div>
+          <img src="assets/img/detalhe-1.jpg" alt="Detalhe construtivo de iluminação indireta e marcenaria" loading="lazy">
+        </div>
+        <div class="entry__body">
+          <span class="entry__num">02</span>
+          <h3>Projeto executivo + complementares</h3>
+          <p>Arquitetura, estrutura, elétrica, hidráulica, climatização. Tudo detalhado e compatibilizado.</p>
+        </div>
+      </article>
+
+      <!-- 03 foto esquerda -->
+      <article class="entry entry--media-left">
+        <div class="entry__media">
+          <div class="entry__media-bg" style="background-image:url('assets/img/detalhe-2.jpg')"></div>
+          <img src="assets/img/detalhe-2.jpg" alt="Detalhe de espelho integrado à marcenaria" loading="lazy">
+        </div>
+        <div class="entry__body">
+          <span class="entry__num">03</span>
+          <h3>Memorial de materiais com especificação técnica</h3>
+          <p>Cada acabamento, cada metragem, cada marca. Sem espaço para troca silenciosa por opção mais barata.</p>
+        </div>
+      </article>
+
+      <!-- 04 foto direita -->
+      <article class="entry entry--media-right">
+        <div class="entry__media">
+          <div class="entry__media-bg" style="background-image:url('assets/img/detalhe-4.jpg')"></div>
+          <img src="assets/img/detalhe-4.jpg" alt="Sala ampla com cromaticidade neutra projetada pela UNUS" loading="lazy">
+        </div>
+        <div class="entry__body">
+          <span class="entry__num">04</span>
+          <h3>Custo e planejamento físico-financeiro</h3>
+          <p>Quanto, quando e por quê. Cronograma em contrato.</p>
+        </div>
+      </article>
+
+      <!-- 05 foto esquerda -->
+      <article class="entry entry--media-left">
+        <div class="entry__media">
+          <div class="entry__media-bg" style="background-image:url('assets/img/processo.jpg')"></div>
+          <img src="assets/img/processo.jpg" alt="Equipe coordenando execução em ambiente em obra" loading="lazy">
+        </div>
+        <div class="entry__body">
+          <span class="entry__num">05</span>
+          <h3>Gestão da execução</h3>
+          <p>A UNUS coordena equipe, fornecedores e prazos. Você não precisa estar no canteiro.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="manifesto__inner">
+      <p class="section-label section-label--light">Manifesto</p>
+      <h2 class="h-display">Acreditamos<br>que arquitetura<br>vai além do projeto.</h2>
+      <p>Vai sem alma, sem propósito e sem presença. Cada cliente nasce de escuta, e cada obra envolve um repertório e a individualidade de quem&nbsp;vai&nbsp;vivê-la.</p>
+    </div>
+  </section>
+
+  <!-- BONUS (ícones SVG premium) -->
+  <section class="bonus">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">05 · Diferenciais exclusivos</p>
+        <h2 class="h-display">O que só a UNUS entrega.</h2>
+      </header>
+
+      <div class="bonus__grid">
+        <article class="bonus__card">
+          <span class="bonus__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="6" width="28" height="36" rx="2"/>
+              <line x1="16" y1="14" x2="32" y2="14"/>
+              <line x1="16" y1="20" x2="32" y2="20"/>
+              <line x1="16" y1="26" x2="26" y2="26"/>
+              <polyline points="28 32 32 36 38 28"/>
+            </svg>
+          </span>
+          <h3>Acompanhamento de Fidelidade Digital</h3>
+          <p>Relatórios periódicos que comprovam, etapa por etapa, que a execução corresponde ao projeto aprovado. Você não precisa confiar — você tem a evidência.</p>
+        </article>
+        <article class="bonus__card">
+          <span class="bonus__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4 L40 12 V24 C40 33 32 40 24 44 C16 40 8 33 8 24 V12 Z"/>
+              <polyline points="17 24 22 29 32 19"/>
+            </svg>
+          </span>
+          <h3>Assessoria em prefeitura e órgãos reguladores</h3>
+          <p>Aprovações, alvarás, conformidades. A UNUS resolve a parte burocrática que trava obras.</p>
+        </article>
+        <article class="bonus__card">
+          <span class="bonus__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="24 6 42 20 24 42 6 20"/>
+              <line x1="6" y1="20" x2="42" y2="20"/>
+              <line x1="16" y1="13" x2="20" y2="20"/>
+              <line x1="32" y1="13" x2="28" y2="20"/>
+              <line x1="24" y1="6" x2="24" y2="20"/>
+            </svg>
+          </span>
+          <h3>Curadoria técnica de fornecedores e acabamentos</h3>
+          <p>Você não escolhe entre opções aleatórias. Recebe um menu curado por critério técnico e estético.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO (border-radius grande) -->
+  <section class="processo-wrap">
+    <section class="processo" id="processo">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-label section-label--light">06 · Processo</p>
+          <h2 class="h-display">Da primeira reunião<br>à entrega da chave.</h2>
+        </header>
+
+        <ol class="passos">
+          <li class="passo">
+            <div class="passo__num">01</div>
+            <div class="passo__body">
+              <h3>Viabilidade técnica</h3>
+              <p>Visita ao terreno ou ambiente. Diagnóstico, restrições legais, possibilidades reais.</p>
+            </div>
+          </li>
+          <li class="passo">
+            <div class="passo__num">02</div>
+            <div class="passo__body">
+              <h3>Projeto e maquete 3D</h3>
+              <p>Você vê antes de aprovar. Decisão informada, não apostada.</p>
+            </div>
+          </li>
+          <li class="passo">
+            <div class="passo__num">03</div>
+            <div class="passo__body">
+              <h3>Contrato com cronograma e custo fechado</h3>
+              <p>Tudo previsto. Tudo em contrato.</p>
+            </div>
+          </li>
+          <li class="passo">
+            <div class="passo__num">04</div>
+            <div class="passo__body">
+              <h3>Execução + Fidelidade Digital</h3>
+              <p>A UNUS toca a obra. Você recebe relatórios. No fim, recebe a chave.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </section>
+
+  <!-- CASES -->
+  <section class="cases" id="cases">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">07 · Cases</p>
+        <h2 class="h-display">Onde a UNUS<br>já entregou.</h2>
+      </header>
+
+      <div class="cases__list">
+        <article class="case">
+          <div class="case__media">
+            <img src="assets/img/case-1.jpg" alt="Apartamento 305 — sala estar com painel de madeira e iluminação indireta" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag">Residencial · Alto padrão</p>
+            <h3>Apartamento 305</h3>
+            <p>Projeto residencial completo com curadoria integral de marcenaria, iluminação cênica e acabamentos premium. Sala, quartos, cozinha e banheiros entregues sob única assinatura, da concepção à última peça instalada.</p>
+            <ul class="case__meta">
+              <li><span>Tipo</span> Residencial</li>
+              <li><span>Escopo</span> Projeto + execução</li>
+              <li><span>Local</span> Recife / PE</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case case--reverse">
+          <div class="case__media">
+            <img src="assets/img/case-2.jpg" alt="Caxanga Golf Club — projeto de baias para cavalos com cobertura cerâmica" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag">Comercial · Equipamento esportivo</p>
+            <h3>Caxanga Golf Club</h3>
+            <p>Projeto de baias e estabulos para clube de golfe e hipismo, com ventilação técnica, conforto animal e identidade arquitetônica integrada ao paisagismo do clube. Compatibilização entre infraestrutura técnica e estética sob uma única responsabilidade.</p>
+            <ul class="case__meta">
+              <li><span>Tipo</span> Comercial</li>
+              <li><span>Escopo</span> Projeto integrado</li>
+              <li><span>Local</span> Recife / PE</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case__media">
+            <img src="assets/img/case-3.jpg" alt="Apartamento 101 — sala integrada com painel de madeira e marcenaria sob medida" loading="lazy">
+          </div>
+          <div class="case__body">
+            <p class="case__tag">Residencial · Reforma integrada</p>
+            <h3>Apartamento 101</h3>
+            <p>Reforma residencial com integração de ambientes, marcenaria sob medida e revisão completa das instalações. Da viabilidade técnica à entrega da chave, sem o morador precisar coordenar fornecedores ou cronograma.</p>
+            <ul class="case__meta">
+              <li><span>Tipo</span> Residencial</li>
+              <li><span>Escopo</span> Reforma chave-na-mão</li>
+              <li><span>Local</span> Recife / PE</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA FULL-WIDTH — slideshow -->
+  <section class="gallery-slideshow" aria-label="Galeria de obras">
+    <div class="gallery-slideshow__inner">
+      <div class="slide is-active" style="background-image:url('assets/img/case-1.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/secundaria.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/case-2.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/detalhe-1.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/case-3.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/manifesto.jpg')"></div>
+      <div class="slide" style="background-image:url('assets/img/detalhe-4.jpg')"></div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">08 · Depoimentos</p>
+        <h2 class="h-display">Quem já confiou<br>a obra à UNUS.</h2>
+        <!-- FAKE: depoimentos finais aguardam envio do cliente — placeholders abaixo -->
+      </header>
+
+      <div class="depo__grid">
+        <figure class="depo">
+          <blockquote>"A UNUS assumiu a obra do início ao fim. Em nenhum momento precisei correr atrás de fornecedor ou orçamento — tudo previsto, tudo entregue."</blockquote>
+          <figcaption>
+            <strong>[A CONFIRMAR — nome do cliente]</strong>
+            <span>Empresário · Recife / PE</span>
+          </figcaption>
+        </figure>
+        <figure class="depo">
+          <blockquote>"O cronograma foi cumprido. O orçamento foi cumprido. E o resultado é exatamente o que vi na maquete 3D. Era isso que eu procurava."</blockquote>
+          <figcaption>
+            <strong>[A CONFIRMAR — nome do cliente]</strong>
+            <span>Diretora · Clínica privada</span>
+          </figcaption>
+        </figure>
+        <figure class="depo">
+          <blockquote>"Contratei a UNUS pra não virar gerente de obra. Era exatamente isso que eu queria evitar. E foi exatamente o que recebi."</blockquote>
+          <figcaption>
+            <strong>[A CONFIRMAR — nome do cliente]</strong>
+            <span>Investidor · Empreendimento comercial</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (cards horizontais — bordas gradient + foto diagonal) -->
+  <section class="features">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">Diferenciais</p>
+        <h2 class="h-display">O que você ganha<br>com a UNUS.</h2>
+      </header>
+
+      <div class="features__grid">
+        <article class="feature-card">
+          <div class="feature-card__media"><img src="assets/img/detalhe-1.jpg" alt="" loading="lazy"></div>
+          <div class="feature-card__body">
+            <h3 class="feature-card__title">Responsabilidade única</h3>
+            <p>Um contrato, um interlocutor. Você não gerencia ninguém.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__media"><img src="assets/img/detalhe-2.jpg" alt="" loading="lazy"></div>
+          <div class="feature-card__body">
+            <h3 class="feature-card__title">Custo fechado em contrato</h3>
+            <p>Cronograma e orçamento previstos. Sem "imprevisto" no meio.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__media"><img src="assets/img/detalhe-3.jpg" alt="" loading="lazy"></div>
+          <div class="feature-card__body">
+            <h3 class="feature-card__title">Fidelidade Digital</h3>
+            <p>Relatórios periódicos comprovam execução = projeto aprovado.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__media"><img src="assets/img/detalhe-4.jpg" alt="" loading="lazy"></div>
+          <div class="feature-card__body">
+            <h3 class="feature-card__title">Curadoria técnica</h3>
+            <p>Fornecedores e materiais selecionados por critério técnico.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM — foto colada na margem direita -->
+  <section class="para-quem">
+    <div class="para-quem__grid">
+      <div class="para-quem__copy">
+        <p class="section-label">09 · Para quem é</p>
+        <h2 class="h-display">Você vai se<br>identificar com<br>a UNUS se:</h2>
+        <ul class="checklist">
+          <li>Você tem 30+ anos, conduz um negócio ou carreira sólida, e tempo é seu recurso mais escasso.</li>
+          <li>Você já viveu (ou ouviu de perto) o desgaste de uma obra mal gerida e não quer repetir.</li>
+          <li>Você valoriza ter um único responsável a quem cobrar, em vez de uma cadeia de profissionais culpando uns aos outros.</li>
+          <li>Você prefere pagar mais por previsibilidade do que economizar em incerteza.</li>
+          <li>Você quer um projeto que reflita seu padrão — sem se envolver no canteiro.</li>
+        </ul>
+      </div>
+      <div class="para-quem__media">
+        <div class="para-quem__media-bg"></div>
+        <img src="assets/img/sobre.jpg" alt="Espaço em tons quentes com espelho integrado" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="garantia">
+    <div class="container garantia__inner">
+      <p class="section-label">10 · Garantia</p>
+      <h2 class="h-display garantia__h">5 anos de garantia<br>legal&nbsp;sobre&nbsp;a&nbsp;obra.</h2>
+      <p>A UNUS responde pela solidez e segurança da edificação por 5 anos, conforme o Código Civil brasileiro e a <span class="nowrap">NBR 15575 (Norma de Desempenho)</span>.</p>
+      <p class="garantia__nota">Mas a verdade é simples: uma obra bem feita raramente cobra a garantia. A Fidelidade Digital existe pra que você não precise dela.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <header class="section-head">
+        <p class="section-label">11 · FAQ</p>
+        <h2 class="h-display">Perguntas que você<br>provavelmente está fazendo.</h2>
+      </header>
+
+      <div class="accordion">
+        <details class="faq-item">
+          <summary>Quanto custa um projeto UNUS?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>Cada projeto é dimensionado individualmente — área, complexidade, padrão de acabamento e prazo. O orçamento é fechado depois da viabilidade técnica e entra em contrato. Sem surpresa no meio do caminho.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Vocês trabalham fora de Recife?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>[A CONFIRMAR — briefing menciona Recife/PE, mas não define se atendem fora da região.]</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Quanto tempo dura uma obra com a UNUS?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>O prazo é definido na etapa de viabilidade técnica e formalizado em contrato. Cada projeto tem seu cronograma — e ele é cumprido com a Fidelidade Digital monitorando etapa por etapa.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Posso só contratar o projeto, sem a execução?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>[A CONFIRMAR — o diferencial é o chave-na-mão integrado; precisa definir se atendem projetos isolados.]</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>E se eu já tenho um terreno complicado?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>Provavelmente vai dar. A UNUS já viabilizou projetos com restrições técnicas, espaços compactos e exigências de norma considerados complexos por outros escritórios. A etapa de viabilidade técnica esclarece em poucas semanas o que é possível, com que custo e em que prazo.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Qual a diferença pra um construtor tradicional?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>Construtor executa. Arquiteto projeta. A UNUS faz as duas coisas, sob a mesma assinatura, com responsabilidade única e Fidelidade Digital comprovando execução = projeto.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Vocês cuidam de aprovações em prefeitura?<span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-body"><p>Sim. Assessoria em órgãos reguladores está inclusa.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final" id="contato">
+    <div class="cta-final__bg">
+      <img src="assets/img/cta.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container cta-final__inner">
+      <p class="section-label section-label--light">12 · Próxima obra</p>
+      <h2 class="h-display h-display--light">Sua próxima obra pode<br>começar sem ansiedade.</h2>
+      <p class="lede lede--light">Conversa inicial sem compromisso. A gente entende seu projeto, sua expectativa, e diz com clareza se faz sentido seguir.</p>
+      <a class="btn btn--solid btn--lg" href="https://wa.me/5581999999999" target="_blank" rel="noopener">Conversar com a UNUS no WhatsApp</a>
+      <p class="cta-final__micro">Resposta no horário comercial. Atendimento direto com a equipe técnica.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="brand__mark brand__mark--lg">U N U S</span>
+      <p class="footer__tagline">Arquitetura integrada chave-na-mão.<br>Recife · PE</p>
+    </div>
+    <div class="footer__col">
+      <p class="footer__label">Contato</p>
+      <ul>
+        <li><a href="mailto:contato@unusarquitetura.com.br">contato@unusarquitetura.com.br</a></li>
+        <li><a href="https://wa.me/5581999999999" target="_blank" rel="noopener">WhatsApp <!-- FAKE: numero real --></a></li>
+        <li><a href="https://instagram.com/unus.arquitetura" target="_blank" rel="noopener">@unus.arquitetura</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__label">Responsabilidade técnica</p>
+      <ul>
+        <li><!-- FAKE: CNPJ real -->CNPJ XX.XXX.XXX/0001-XX</li>
+        <li><!-- FAKE: CAU real -->CAU A-XXXXX-X</li>
+        <li>NBR 15575 · Código Civil</li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__label">Navegação</p>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; <span id="year">2026</span> UNUS Arquitetura · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
