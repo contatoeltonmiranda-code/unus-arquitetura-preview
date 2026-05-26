@@ -1825,7 +1825,7 @@ html.js .reveal.is-visible {
 }
 .brand__logo {
   display: block;
-  height: 38px;
+  height: 114px;
   width: auto;
   object-fit: contain;
   transition: filter .4s ease;
@@ -1835,7 +1835,7 @@ html.js .reveal.is-visible {
   filter: invert(1) brightness(2);
 }
 @media (max-width: 720px) {
-  .brand__logo { height: 32px; }
+  .brand__logo { height: 96px; }
 }
 
 /* =====================
