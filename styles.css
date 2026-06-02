@@ -1986,8 +1986,6 @@ html.js .reveal.is-visible {
   font-size: clamp(28px, 3.6vw, 48px);
 }
 
-/* AJUSTE FINO (ronda) - header respiro lateral confortavel (logo/botao longe das bordas) */
-.header__inner { padding-left: clamp(40px, 7vw, 96px); padding-right: clamp(40px, 7vw, 96px); }
 
 
 /* AJUSTE (ronda) - header scrolled: padding inferior -50% + centralizar vertical */
