@@ -2067,6 +2067,25 @@ header.site-header .brand__logo {
   .site-header .nav-toggle { display: none !important; }
   .site-header .nav { display: flex !important; }
 }
+
+/* WP/Elementor override - FULL-BLEED do FUNDO do header (so o .site-header, NAO o .header__inner) */
+/* No Elementor o .e-con/.e-con-inner cria containing block e prende o fixed ao max-width do container; */
+/* forcamos 100vw centralizado pra o fundo (transparente e .is-scrolled branco) cobrir ponta a ponta. */
+.e-con .site-header,
+header.site-header {
+  left: 50% !important;
+  right: auto !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: -50vw !important;
+}
+.e-con > .e-con-inner:has(> .elementor-widget-html .site-header),
+.e-con:has(.site-header) > .e-con-inner {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow-x: clip;
+}
 </style>
 <header class="site-header is-over-hero" id="siteHeader">
   <div class="container header__inner">
