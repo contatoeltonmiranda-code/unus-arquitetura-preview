@@ -2003,3 +2003,23 @@ html.js .reveal.is-visible {
     box-shadow: none !important;
   }
 }
+
+/* WP/Elementor override - logo: vencer .elementor img{height:auto} do tema */
+.brand--image .brand__logo,
+.e-con .site-header .brand__logo,
+header.site-header .brand__logo {
+  height: 114px !important;
+  width: auto !important;
+  max-width: none !important;
+}
+@media (max-width: 720px) {
+  .brand--image .brand__logo,
+  .e-con .site-header .brand__logo,
+  header.site-header .brand__logo { height: 96px !important; }
+}
+/* WP/Elementor override - desktop esconde menu mobile/hamburguer; mostra nav horizontal */
+@media (min-width: 721px) {
+  .site-header .mobile-menu,
+  .site-header .nav-toggle { display: none !important; }
+  .site-header .nav { display: flex !important; }
+}
