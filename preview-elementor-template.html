@@ -2030,6 +2030,43 @@ header.site-header .brand__logo {
   font-size: clamp(28px, 3.6vw, 48px);
 }
 
+
+/* =====================
+   AJUSTE FINO (ronda) - header respiro lateral + scrolled simetrico + pull-quote centralizado
+   ===================== */
+.elementor .site-header > .container.header__inner,
+.elementor .site-header .header__inner,
+.site-header .header__inner {
+  padding-left: clamp(24px, 5vw, 72px) !important;
+  padding-right: clamp(24px, 5vw, 72px) !important;
+}
+.site-header .header__inner,
+.site-header.is-scrolled .header__inner {
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+.quem .pull-quote {
+  max-width: 880px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+.quem .pull-quote blockquote {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.quem .pull-quote .pull-quote__rule {
+  display: block !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 200px !important;
+  max-width: 200px !important;
+  background: var(--hairline-strong) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 </style>
 <header class="site-header is-over-hero" id="siteHeader">
   <div class="container header__inner">
