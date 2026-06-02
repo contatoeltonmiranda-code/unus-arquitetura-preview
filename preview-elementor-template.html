@@ -2086,6 +2086,24 @@ header.site-header {
   padding-right: 0 !important;
   overflow-x: clip;
 }
+/* AJUSTE (ronda) - HEADER MOBILE: blindar distribuicao logo/toggle (so <=720px). */
+@media (max-width: 720px) {
+  .site-header .header__inner,
+  header.site-header .header__inner.container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: var(--gutter) !important;
+    padding-right: var(--gutter) !important;
+  }
+  .site-header .header__inner > .brand { margin-right: auto; }
+  .site-header .header__inner > .nav-toggle { margin-left: auto; }
+}
 </style>
 <header class="site-header is-over-hero" id="siteHeader">
   <div class="container header__inner">
