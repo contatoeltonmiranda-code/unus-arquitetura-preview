@@ -19,23 +19,8 @@ body,.elementor{margin:0 !important;}
 .elementor .elementor-widget-html > .elementor-widget-container{max-width:100% !important;width:100% !important;padding:0 !important;}
 /* HEADER: position:fixed pode ser "preso" por ancestral com transform (motion effects);
    forca ocupar a viewport inteira e distribui conteudo de ponta a ponta. */
-.elementor .site-header{position:fixed !important;left:0 !important;right:0 !important;width:100vw !important;max-width:100vw !important;}
-.elementor .site-header > .container.header__inner,
-.elementor .site-header .header__inner{max-width:var(--maxw) !important;width:auto !important;margin-left:auto !important;margin-right:auto !important;padding-left:var(--gutter) !important;padding-right:var(--gutter) !important;}
 /* FOOTER: garante fundo escuro de ponta a ponta (full-bleed), conteudo segue centralizado pelo .container interno. */
 .elementor .site-footer{width:100vw !important;max-width:100vw !important;margin-left:calc(50% - 50vw) !important;margin-right:calc(50% - 50vw) !important;}
-.elementor .nav-toggle,
-.elementor .nav-toggle:hover,
-.elementor .nav-toggle:focus,
-.elementor .nav-toggle:active,
-.nav-toggle,
-.nav-toggle:hover,
-.nav-toggle:focus,
-.nav-toggle:active {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -1932,21 +1917,6 @@ html.js .reveal.is-visible {
   object-fit: contain;
   transition: filter .4s ease;
 }
-/* vence .elementor img{height:auto;width:auto;max-width:100%} do tema */
-.elementor .site-header .brand--image .brand__logo,
-.e-con .site-header .brand--image .brand__logo,
-header.site-header .brand__logo {
-  height: 114px !important;
-  width: auto !important;
-  max-width: none !important;
-}
-@media (max-width: 720px) {
-  .elementor .site-header .brand--image .brand__logo,
-  .e-con .site-header .brand--image .brand__logo,
-  header.site-header .brand__logo {
-    height: 96px !important;
-  }
-}
 /* logo preto fica invisivel sobre hero escuro — inverter quando over-hero */
 .site-header.is-over-hero:not(.is-scrolled) .brand__logo {
   filter: invert(1) brightness(2);
@@ -2043,22 +2013,6 @@ header.site-header .brand__logo {
 }
 
 
-/* =====================
-   AJUSTE FINO (ronda) - header respiro lateral + scrolled simetrico + pull-quote centralizado
-   ===================== */
-.elementor .site-header > .container.header__inner,
-.elementor .site-header .header__inner,
-.site-header .header__inner {
-  align-items: center !important;
-}
-.site-header .header__inner {
-  padding-top: 22px !important;
-  padding-bottom: 22px !important;
-}
-.site-header.is-scrolled .header__inner {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
-}
 .quem .pull-quote {
   max-width: 880px !important;
   margin-left: auto !important;
@@ -2081,6 +2035,18 @@ header.site-header .brand__logo {
   margin-right: auto !important;
 }
 
+
+/* AJUSTE (ronda) - nav-toggle sem fundo rosa do tema WP (blindado todos os estados) */
+@media (max-width: 768px) {
+  .nav-toggle,
+  .nav-toggle:hover,
+  .nav-toggle:focus,
+  .nav-toggle:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
 </style>
 <header class="site-header is-over-hero" id="siteHeader">
   <div class="container header__inner">
@@ -2708,6 +2674,97 @@ header.site-header .brand__logo {
     <p>&copy; <span id="year">2026</span> UNUS Arquitetura · Todos os direitos reservados.</p>
   </div>
 </footer>
+<script>
+/* UNUS Arquitetura — LP v2 (iter 2) */
+(function () {
+  'use strict';
+
+  // ===== Header scroll state =====
+  var header = document.getElementById('siteHeader');
+  function onScroll() {
+    var y = window.pageYOffset;
+    if (y > 30) header.classList.add('is-scrolled');
+    else header.classList.remove('is-scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ===== Mobile menu =====
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', function () {
+      var isOpen = navToggle.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) {
+        mobileMenu.hidden = false;
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.hidden = true;
+        document.body.style.overflow = '';
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.hidden = true;
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ===== Reveal on scroll =====
+  if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+    var targets = document.querySelectorAll(
+      '.section-head, .entry, .case, .bonus__card, .passo, .depo, .quem__body, .pull-quote, .para-quem__copy, .garantia__inner, .cta-final__inner, .feature-card, .dor--premium'
+    );
+    targets.forEach(function (el) { el.classList.add('reveal'); });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // ===== FAQ exclusive accordion =====
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (item.open) {
+        faqItems.forEach(function (other) {
+          if (other !== item && other.open) other.open = false;
+        });
+      }
+    });
+  });
+
+  // ===== Gallery slideshow =====
+  var slides = document.querySelectorAll('.gallery-slideshow .slide');
+  if (slides.length > 0) {
+    var current = 0;
+    setInterval(function () {
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
+    }, 4500);
+  }
+
+  // ===== Footer year =====
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();
+
+</script>
 <script>
 /* UNUS Arquitetura — LP v2 (iter 2) */
 (function () {
