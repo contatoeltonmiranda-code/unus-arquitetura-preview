@@ -363,8 +363,9 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
 .nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-/* menu aberto: X branco sobre fundo escuro do menu */
-.nav-toggle.is-open span { background: var(--white); }
+/* menu aberto: fundo branco -> X preto (vence .is-over-hero branco) */
+.site-header .nav-toggle.is-open span,
+.site-header.is-over-hero:not(.is-scrolled) .nav-toggle.is-open span { background: var(--black); }
 
 .mobile-menu[hidden] { display: none !important; }
 
@@ -373,7 +374,7 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   inset: 0;
   min-height: 100vh;
   min-height: 100dvh;
-  background: var(--black);
+  background: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -388,8 +389,8 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   padding: 22px 0;
   font-family: var(--font-serif);
   font-size: 24px;
-  border-bottom: 1px solid rgba(255,255,255,0.16);
-  color: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  color: var(--black);
 }
 
 .mobile-menu a.btn {
@@ -400,11 +401,12 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   text-align: center;
 }
 
-/* AJUSTE 6 — botao WhatsApp no menu: branco com letra preta */
+/* AJUSTE 6 — botao WhatsApp no menu: fundo branco, texto preto, borda preta p/ visibilidade */
 .mobile-menu a.btn--solid,
 .mobile-menu a.btn--solid:hover {
   background: var(--white);
   color: var(--black);
+  border: 1px solid var(--black) !important;
 }
 
 /* =====================
@@ -1816,13 +1818,22 @@ html.js .reveal.is-visible {
 
   .pull-quote blockquote { font-size: clamp(22px, 6.5vw, 32px); }
 
-  /* AJUSTE MOBILE 1 — hero respiro entre eyebrow/h1/lede/bullets */
-  .hero__inner { padding-top: clamp(120px, 16vh, 160px); padding-bottom: 72px; }
+  /* AJUSTE MOBILE 1 (causa raiz) — hero altura AUTO no mobile.
+     O min-height:880px + flex align-items:center comprimia/sobrepunha
+     o conteudo. No mobile: altura natural, conteudo flui de cima. */
+  .hero--bg {
+    min-height: auto;
+    display: block;
+  }
+  .hero__inner {
+    padding-top: clamp(120px, 16vh, 160px);
+    padding-bottom: 72px;
+  }
   .hero .eyebrow { margin-bottom: 24px; }
   .display--hero { margin-top: 0; }
   .hero .lede { margin-top: 28px; }
-  .hero__bullets { margin: 40px 0 40px; gap: 16px; }
-  .hero__bullets li { padding: 14px 0; }
+  .hero__bullets { margin: 40px 0 40px; gap: 18px; }
+  .hero__bullets li { padding: 16px 0; }
 
   /* AJUSTE MOBILE 3 — remove quebra forcada apos "tem" */
   .dores__bridge .br-desktop { display: none; }
