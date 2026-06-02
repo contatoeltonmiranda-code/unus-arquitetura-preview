@@ -1987,4 +1987,21 @@ html.js .reveal.is-visible {
 }
 
 /* AJUSTE FINO (ronda) - header respiro lateral confortavel (logo/botao longe das bordas) */
-.header__inner { padding-left: clamp(24px, 5vw, 72px); padding-right: clamp(24px, 5vw, 72px); }
+.header__inner { padding-left: clamp(40px, 7vw, 96px); padding-right: clamp(40px, 7vw, 96px); }
+
+
+/* AJUSTE (ronda) - header scrolled: padding inferior -50% + centralizar vertical */
+.site-header .header__inner { align-items: center; }
+.site-header.is-scrolled .header__inner { padding-bottom: 11px; }
+
+/* AJUSTE (ronda) - nav-toggle sem fundo rosa do tema WP (blindado todos os estados) */
+@media (max-width: 768px) {
+  .nav-toggle,
+  .nav-toggle:hover,
+  .nav-toggle:focus,
+  .nav-toggle:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

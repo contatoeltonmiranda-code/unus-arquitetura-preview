@@ -24,6 +24,18 @@ body,.elementor{margin:0 !important;}
 .elementor .site-header .header__inner{max-width:100% !important;width:100% !important;margin:0 !important;padding-left:clamp(20px,4vw,48px) !important;padding-right:clamp(20px,4vw,48px) !important;}
 /* FOOTER: garante fundo escuro de ponta a ponta (full-bleed), conteudo segue centralizado pelo .container interno. */
 .elementor .site-footer{width:100vw !important;max-width:100vw !important;margin-left:calc(50% - 50vw) !important;margin-right:calc(50% - 50vw) !important;}
+.elementor .nav-toggle,
+.elementor .nav-toggle:hover,
+.elementor .nav-toggle:focus,
+.elementor .nav-toggle:active,
+.nav-toggle,
+.nav-toggle:hover,
+.nav-toggle:focus,
+.nav-toggle:active {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -2037,13 +2049,17 @@ header.site-header .brand__logo {
 .elementor .site-header > .container.header__inner,
 .elementor .site-header .header__inner,
 .site-header .header__inner {
-  padding-left: clamp(24px, 5vw, 72px) !important;
-  padding-right: clamp(24px, 5vw, 72px) !important;
+  padding-left: clamp(40px, 7vw, 96px) !important;
+  padding-right: clamp(40px, 7vw, 96px) !important;
+  align-items: center !important;
 }
-.site-header .header__inner,
-.site-header.is-scrolled .header__inner {
+.site-header .header__inner {
   padding-top: 22px !important;
   padding-bottom: 22px !important;
+}
+.site-header.is-scrolled .header__inner {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
 }
 .quem .pull-quote {
   max-width: 880px !important;
