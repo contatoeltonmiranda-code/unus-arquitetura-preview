@@ -363,9 +363,10 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
 .nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-/* menu aberto: fundo branco -> X preto (vence .is-over-hero branco) */
+/* menu aberto: fundo branco -> X SEMPRE preto, independente de scroll/posicao */
+.nav-toggle.is-open span,
 .site-header .nav-toggle.is-open span,
-.site-header.is-over-hero:not(.is-scrolled) .nav-toggle.is-open span { background: var(--black); }
+.site-header.is-over-hero:not(.is-scrolled) .nav-toggle.is-open span { background: var(--black) !important; }
 
 .mobile-menu[hidden] { display: none !important; }
 
