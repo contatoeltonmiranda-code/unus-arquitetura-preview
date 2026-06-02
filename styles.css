@@ -363,18 +363,24 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
 .nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+/* menu aberto: X branco sobre fundo escuro do menu */
+.nav-toggle.is-open span { background: var(--white); }
 
 .mobile-menu[hidden] { display: none !important; }
 
 .mobile-menu {
   position: fixed;
-  inset: 76px 0 0 0;
-  background: var(--white);
+  inset: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--black);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0;
-  padding: 40px var(--gutter);
+  padding: 100px var(--gutter) 48px;
   z-index: 99;
+  overflow-y: auto;
 }
 
 .mobile-menu a {
@@ -382,8 +388,8 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   padding: 22px 0;
   font-family: var(--font-serif);
   font-size: 24px;
-  border-bottom: 1px solid var(--hairline);
-  color: var(--black);
+  border-bottom: 1px solid rgba(255,255,255,0.16);
+  color: var(--white);
 }
 
 .mobile-menu a.btn {
@@ -392,6 +398,13 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   font-size: 13px;
   border: none;
   text-align: center;
+}
+
+/* AJUSTE 6 — botao WhatsApp no menu: branco com letra preta */
+.mobile-menu a.btn--solid,
+.mobile-menu a.btn--solid:hover {
+  background: var(--white);
+  color: var(--black);
 }
 
 /* =====================
@@ -1605,6 +1618,13 @@ p, li, span, a, summary, button, blockquote, figcaption, label, input, textarea,
   color: var(--muted-light);
 }
 
+/* AJUSTE 6 — CTA final WhatsApp: branco com letra preta (desktop + mobile) */
+.cta-final__inner .btn--solid,
+.cta-final__inner .btn--solid:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
 /* =====================
    FOOTER
    ===================== */
@@ -1795,6 +1815,32 @@ html.js .reveal.is-visible {
   .processo-wrap { padding: 32px 16px; }
 
   .pull-quote blockquote { font-size: clamp(22px, 6.5vw, 32px); }
+
+  /* AJUSTE MOBILE 1 — hero respiro entre eyebrow/h1/lede/bullets */
+  .hero__inner { padding-top: clamp(120px, 16vh, 160px); padding-bottom: 72px; }
+  .hero .eyebrow { margin-bottom: 24px; }
+  .display--hero { margin-top: 0; }
+  .hero .lede { margin-top: 28px; }
+  .hero__bullets { margin: 40px 0 40px; gap: 16px; }
+  .hero__bullets li { padding: 14px 0; }
+
+  /* AJUSTE MOBILE 3 — remove quebra forcada apos "tem" */
+  .dores__bridge .br-desktop { display: none; }
+
+  /* AJUSTE MOBILE 4 — processo 1 coluna */
+  .passos { grid-template-columns: 1fr; }
+  .passo {
+    border-right: 0;
+    border-bottom: 1px solid var(--hairline-light);
+    padding: 32px 0;
+    padding-left: 0;
+  }
+  .passo:first-child { padding-top: 0; }
+  .passo:last-child { border-bottom: 0; }
+  .passo:not(:first-child) { padding-left: 0; }
+
+  /* AJUSTE MOBILE 5 — garantia reduz 70% do espaco superior */
+  .garantia { padding-top: calc(var(--section-y) * 0.3); }
 }
 
 @media (max-width: 480px) {
